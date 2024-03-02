@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import office_img from "../../public/pexels-marc-mueller-380768.jpg";
 import img_1 from "../../public/10032884.jpg";
@@ -16,6 +17,7 @@ import wave_bg from "../../public/wave (1).svg";
 import social_1 from "../../public/facebook-svgrepo-com.svg";
 import social_3 from "../../public/linkedin-svgrepo-com (1).svg";
 import social_4 from "../../public/twitter-svgrepo-com (1).svg";
+import { useRouter } from "next/navigation";
 const keyfetaures = [
   {
     title: "Employee management",
@@ -72,6 +74,8 @@ const socialmedia = [
   },
 ];
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-between py-24 md:px-10 px-3 max-w-[1500px] m-auto">
@@ -97,6 +101,7 @@ export default function Home() {
                 <Button
                   type="button"
                   className="md:text-xl text-md font-popins md:px-8 md:py-4 py-2 px-4 font-[900]"
+                  onClick={() => router.push("/auth/login")}
                 >
                   Sign In
                 </Button>
@@ -231,7 +236,6 @@ export default function Home() {
                 <textarea
                   className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full rounded-sm"
                   placeholder="Enter Message"
-                  
                 ></textarea>
               </span>
             </div>
