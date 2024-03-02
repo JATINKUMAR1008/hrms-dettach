@@ -12,6 +12,7 @@ import logo_4 from "../../public/microsoft-logo-svgrepo-com.svg";
 import logo_5 from "../../public/under-armour-logo-svgrepo-com.svg";
 import logo_6 from "../../public/slack-logo-svgrepo-com.svg";
 import Link from "next/link";
+import wave_bg from "../../public/wave (1).svg";
 import social_1 from "../../public/facebook-svgrepo-com.svg";
 import social_3 from "../../public/linkedin-svgrepo-com (1).svg";
 import social_4 from "../../public/twitter-svgrepo-com (1).svg";
@@ -73,8 +74,8 @@ const socialmedia = [
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between py-24 px-10 max-w-[1500px] m-auto">
-        <section className="h-full flex items-center justify-center w-full">
+      <main className="flex min-h-screen flex-col items-center justify-between py-24 md:px-10 px-3 max-w-[1500px] m-auto">
+        <section className="h-full flex items-center justify-center w-full px-2">
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0 w-full mb-[10%]">
             <Image
               src={office_img}
@@ -95,13 +96,13 @@ export default function Home() {
               <div className="flex flex-row gap-5 mt-10">
                 <Button
                   type="button"
-                  className="md:text-xl text-md font-popins md:px-8 md:py-4 py-2 px-4"
+                  className="md:text-xl text-md font-popins md:px-8 md:py-4 py-2 px-4 font-[900]"
                 >
-                  Sing In
+                  Sign In
                 </Button>
                 <Button
                   type="button"
-                  className="md:text-xl font-popins md:px-8 md:py-4 py-2 px-4  bg-gray-400"
+                  className="md:text-xl font-popins md:px-8 md:py-4 py-2 px-4  bg-gray-400 font-[900]"
                 >
                   Request a demo
                 </Button>
@@ -109,7 +110,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-left w-full py-10">
+        <section className="text-left w-full py-10 px-3">
           <h1 className="md:text-5xl text-3xl font-[900] font-montserrat md:max-w-[80%]">
             All-in-one HRMS to streamline your people operations
           </h1>
@@ -117,13 +118,13 @@ export default function Home() {
             From hiring to retiring and everything in between, Workwise has you
             covered. Explore our alli-in-one solution.
           </p>
-          <div className="flex md:flex-row flex-col mt-10 w-full h-full gap-5  items-start">
+          <div className="flex md:flex-row flex-col mt-10 w-full h-full gap-5 px-5 items-center">
             {keyfetaures.map((feature, index) => (
               <div key={index} className="md:w-[25%]  m-auto h-full">
                 <Image
                   src={feature.img}
                   alt="feature img"
-                  className="object-cover rounded-md"
+                  className="object-cover rounded-md aspect-auto"
                 />
                 <h1 className="text-lg font-popins font-semibold mt-2">
                   {feature.title}
@@ -153,7 +154,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="text-center py-20 mt-20">
+        <section className="text-center py-20 mt-20 px-4">
           <h1 className="text-3xl font-[900] font-montserrat">
             Ready to transform your HR?
           </h1>
@@ -161,7 +162,7 @@ export default function Home() {
             Discover how Workwise can help you attract, retain, and manage top
             talent.
           </p>
-          <div className="w-full flex flex-row mt-10 md:max-w-[60%] justify-between m-auto">
+          <div className="w-full flex flex-row mt-10 md:max-w-[60%] justify-evenly m-auto">
             <Button
               type="button"
               className="md:text-xl text-sm md:px-7 py-3 px-4 font-montserrat font-[900]"
@@ -170,72 +171,83 @@ export default function Home() {
             </Button>
             <Button
               type="button"
-              className="bg-gray-400  md:text-xl text-sm font-montserrat font-[900] text-black"
+              className="bg-gray-400  md:text-xl text-sm font-montserrat font-[900] "
             >
               Request a demo
             </Button>
           </div>
         </section>
-        <section className="bg-gray-100 py-10 rounded-sm w-full text-center px-10 my-20">
-          <h1 className="text-black font-montserrat font-[900] text-4xl">
-            Reach us out
-          </h1>
-          <div className="w-full grid grid-cols-2 gap-6 mt-10">
-            <span className="flex flex-col items-start gap-2">
-              <label className="text-black font-bold col-span-1">
-                Full Name
-              </label>
-              <input
-                className="bg-gray-200 px-6 py-7 w-full"
-                placeholder="Enter Name"
-              />
-            </span>
-            <span className="flex flex-col items-start gap-2">
-              <label className="text-black font-bold col-span-1">
-                Email Address
-              </label>
-              <input
-                className="bg-gray-200 px-6 py-7 w-full"
-                placeholder="Enter Email Address"
-              />
-            </span>
-            <span className="flex flex-col items-start gap-2">
-              <label className="text-black font-bold col-span-1">
-                Phone Number
-              </label>
-              <input
-                className="bg-gray-200 px-6 py-7 w-full"
-                placeholder="Enter Phone Number"
-              />
-            </span>
-            <span className="flex flex-col items-start gap-2">
-              <label className="text-black font-bold col-span-1">Subject</label>
-              <input
-                className="bg-gray-200 px-6 py-7 w-full"
-                placeholder="Enter Subject"
-              />
-            </span>
-            <span className="flex flex-col items-start gap-2 col-span-2">
-              <label className="text-black font-bold col-span-1">Message</label>
-              <textarea
-                className="bg-gray-200 px-6 py-7 w-full"
-                placeholder="Enter Message"
-                rows={15}
-              ></textarea>
-            </span>
+        <section className="rounded-sm w-full text-center my-20 relative">
+          <Image
+            src={wave_bg}
+            alt="bg"
+            className="absolute -z-10 md:-bottom-[12%] -bottom-[35%] w-full h-full object-fit"
+          />
+          <div className="w-[80%] h-full bg-gray-100 m-auto md:p-10 p-4 py-4">
+            <h1 className="text-black font-montserrat font-[900] md:text-4xl text-xl">
+              Reach us out
+            </h1>
+            <div className="w-full grid grid-cols-2 gap-6 md:mt-10 mt-5">
+              <span className="flex flex-col items-start gap-2">
+                <label className="text-black font-bold col-span-1 text-xs md:text-md">
+                  Full Name
+                </label>
+                <input
+                  className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full"
+                  placeholder="Enter Name"
+                />
+              </span>
+              <span className="flex flex-col items-start gap-2">
+                <label className="text-black font-bold col-span-1 text-xs md:text-md">
+                  Email Address
+                </label>
+                <input
+                  className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full"
+                  placeholder="Enter Email Address"
+                />
+              </span>
+              <span className="flex flex-col items-start gap-2">
+                <label className="text-black font-bold col-span-1 text-xs md:text-md">
+                  Phone Number
+                </label>
+                <input
+                  className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full"
+                  placeholder="Enter Phone Number"
+                />
+              </span>
+              <span className="flex flex-col items-start gap-2">
+                <label className="text-black font-bold col-span-1 text-xs md:text-md">
+                  Subject
+                </label>
+                <input
+                  className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full"
+                  placeholder="Enter Subject"
+                />
+              </span>
+              <span className="flex flex-col items-start gap-2 col-span-2">
+                <label className="text-black font-bold col-span-1 text-xs md:text-md">
+                  Message
+                </label>
+                <textarea
+                  className="bg-gray-200 md:px-6 md:py-7 py-2 px-3 text-xs md:text-md w-full rounded-sm"
+                  placeholder="Enter Message"
+                  
+                ></textarea>
+              </span>
+            </div>
+            <Button
+              type="submit"
+              className="md:text-xl md:mt-10 mt-5 font-montserrat font-extrabold md:px-7 md:py-4 p-2"
+            >
+              Send Message
+            </Button>
           </div>
-          <Button
-            type="submit"
-            className="text-xl mt-10 font-montserrat font-extrabold px-7 py-4"
-          >
-            Send Message
-          </Button>
         </section>
       </main>
       <footer className="w-full pt-20 pb-10 bg-gray-800 mt-20 px-20 rounded-sm relative">
-        <div className="flex flex-row justify-evenly items-center">
+        <div className="flex sm:flex-row flex-col sm:justify-evenly sm:items-center items-start sm:flex-wrap gap-10">
           <div>
-            <h1 className="text-gray-100 text-6xl font-[900] font-montserrat">
+            <h1 className="text-gray-100 md:text-6xl text-3xl font-[900] font-montserrat">
               hrms.dev
             </h1>
             <p className="text-md mt-2 text-gray-300 max-w-[300px]">
@@ -243,6 +255,7 @@ export default function Home() {
               your people operations
             </p>
           </div>
+          <hr className="block bg-gray-100 h-[1px] w-full sm:hidden" />
           <div>
             <h1 className="text-gray-100 text-3xl font-[900] font-popins uppercase">
               Follow us
@@ -264,13 +277,13 @@ export default function Home() {
             <h1 className="text-gray-100 text-3xl font-[900] font-popins uppercase">
               Call Us
             </h1>
-            <p className="font-[900] font-montserrat text-6xl text-gray-100">
+            <p className="font-[900] font-montserrat md:text-6xl text-2xl text-gray-100">
               +1 234 567 890
             </p>
           </div>
         </div>
-        <hr className="w-full bg-gray-100 h-[1px] mt-20"/>
-        <div className=" text-gray-200  text-xl font-[900] mt-10 flex justify-between">
+        <hr className="w-full bg-gray-100 h-[1px] mt-20" />
+        <div className=" text-gray-200  md:text-xl text-sm font-[900] mt-10 flex justify-between">
           <p>Copyright © 2024 hrms.dev Inc. All right reserved</p>
         </div>
       </footer>
