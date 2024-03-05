@@ -16,10 +16,10 @@ const registerCompany = (req, res) => __awaiter(void 0, void 0, void 0, function
         const companyData = req.body;
         const company = new company_models_1.CompanyDataModel(companyData);
         yield company.save();
-        res.status(201).json(company);
+        return res.status(201).json(company);
     }
     catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 });
 exports.registerCompany = registerCompany;

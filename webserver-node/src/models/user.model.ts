@@ -42,6 +42,6 @@ const userDataSchema = new Schema(
 );
 
 export const userDataModel: Model<UserDataPayload> = model<UserDataPayload>(
-  "userDataModel",
+  "User_data",
   userDataSchema
 );

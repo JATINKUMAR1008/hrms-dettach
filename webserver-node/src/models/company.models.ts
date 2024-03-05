@@ -44,4 +44,4 @@ const CompanyDataSchema = new Schema(
 );
 
 export const CompanyDataModel: Model<CompanyDataPayload> =
-  model<CompanyDataPayload>("CompanyDataModel", CompanyDataSchema);
+  model<CompanyDataPayload>("Company_data", CompanyDataSchema);

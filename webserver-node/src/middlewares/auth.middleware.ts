@@ -35,6 +35,7 @@ export const isAdmin = async (
   const user = await userDataModel.findById(user_id).select("user_isAdmin");
   if (user?.user_isAdmin) {
     next();
+  } else {
+    throw new Error("Unauthorized");
   }
-  return res.status(401).json({ message: "Unauthorized" });
-};
+};  

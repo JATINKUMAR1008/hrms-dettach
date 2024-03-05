@@ -5,8 +5,8 @@ export const registerCompany = async (req: Request, res: Response) => {
     const companyData = req.body;
     const company = new CompanyDataModel(companyData);
     await company.save();
-    res.status(201).json(company);
+    return res.status(201).json(company);
   } catch (error: any) {
-    res.status(500).json({ message: error.message });
+    return res.status(500).json({ message: error.message });
   }
 };

@@ -31,4 +31,4 @@ const CompanyDataSchema = new mongoose_1.Schema({
     versionKey: false,
     timestamps: true,
 });
-exports.CompanyDataModel = (0, mongoose_1.model)("CompanyDataModel", CompanyDataSchema);
+exports.CompanyDataModel = (0, mongoose_1.model)("Company_data", CompanyDataSchema);

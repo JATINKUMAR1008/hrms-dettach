@@ -31,4 +31,4 @@ const userDataSchema = new mongoose_1.Schema({
 }, {
     timestamps: true,
 });
-exports.userDataModel = (0, mongoose_1.model)("userDataModel", userDataSchema);
+exports.userDataModel = (0, mongoose_1.model)("User_data", userDataSchema);

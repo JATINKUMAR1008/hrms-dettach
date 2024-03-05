@@ -42,6 +42,8 @@ const isAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, function* 
     if (user === null || user === void 0 ? void 0 : user.user_isAdmin) {
         next();
     }
-    return res.status(401).json({ message: "Unauthorized" });
+    else {
+        throw new Error("Unauthorized");
+    }
 });
 exports.isAdmin = isAdmin;

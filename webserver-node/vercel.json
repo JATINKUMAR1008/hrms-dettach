@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds":[
+        {
+            "src": "./dist/sever.js"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/.*",
+            "dest": "/dist/sever.js"
+        }
+    ]
+}
