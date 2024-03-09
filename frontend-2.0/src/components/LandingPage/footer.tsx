@@ -120,7 +120,7 @@ export const Footer = () => {
     <div className="max-w-[1500px] m-auto">
       <div className="w-full pt-20 pb-10 lg:px-24 flex lg:flex-row flex-col items-center lg:items-start justify-between ">
         <div className="flex flex-col lg:mr-20">
-          <h1 className="xl:text-3xl lg:text-2xl text-xl  text-new-primary font-[900] italic font-popins">
+          <h1 className="xl:text-3xl lg:text-2xl text-xl  text-new-primary font-[900] italic font-popins drop-shadow-md  *:">
             hrms.dev
           </h1>
           <div className="mt-8 flex item-center gap-5">

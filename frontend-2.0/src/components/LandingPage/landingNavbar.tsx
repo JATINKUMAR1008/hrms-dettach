@@ -5,7 +5,7 @@ export const LandingPageNavbar = () => {
   return (
     <div className="w-full h-fit py-14 xs:px-10 px-5 2xl:max-w-[1500px] flex text items-center justify-between m-auto">
       <div className="">
-        <h1 className="xl:text-2xl text-xl text-new-primary font-[900] italic font-popins">
+        <h1 className="xl:text-2xl text-xl text-new-primary font-[900] italic font-popins drop-shadow-md shadow-new-primary">
           hrms.dev
         </h1>
       </div>
