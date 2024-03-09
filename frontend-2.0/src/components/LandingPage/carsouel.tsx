@@ -38,32 +38,6 @@ const MENUOPTONS = [
 ];
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 export const Carsouel = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  // useEffect(() => {
-  //   const carousel = carouselRef.current;
-  //   console.log(carousel?.offsetWidth);
-  //   let scrollInterval = setInterval(() => {
-  //     if (carousel) {
-  //       carousel.scrollLeft += carousel.clientWidth / 2; // Adjust the scroll speed as needed
-  //     }
-  //   }, 2); // Adjust the interval duration as needed
-
-  //   // When user interacts with the carousel, clear the interval
-  //   // if (carousel) {
-  //   //   carousel.addEventListener("mouseenter", () =>
-  //   //     clearInterval(scrollInterval)
-  //   //   );
-  //   //   carousel.addEventListener("mouseleave", () => {
-  //   //     scrollInterval = setInterval(() => {
-  //   //       if (carousel) {
-  //   //         carousel.scrollLeft += 2; // Adjust the scroll speed as needed
-  //   //       }
-  //   //     }, 2); // Adjust the interval duration as needed
-  //   //   });
-  //   // }
-
-  //   return () => clearInterval(scrollInterval);
-  // }, []);
   return (
     <div className="max-w-[1500px] m-auto  w-full">
       <RCarousel
@@ -72,8 +46,7 @@ export const Carsouel = () => {
         showThumbs={false}
         showStatus={false}
         showArrows={false}
-        showIndicators={false}
-        className=""
+        showIndicators
       >
         {MENUOPTONS.map((item, index) => (
           <div
