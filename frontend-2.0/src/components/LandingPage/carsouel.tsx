@@ -65,11 +65,11 @@ export const Carsouel = () => {
   //   return () => clearInterval(scrollInterval);
   // }, []);
   return (
-    <div className="max-w-[1500px] m-auto h-[600px] w-full">
+    <div className="max-w-[1500px] m-auto  w-full">
       <RCarousel
         autoPlay
         infiniteLoop
-        showThumbs
+        showThumbs={false}
         showStatus={false}
         className=""
       >
@@ -78,17 +78,17 @@ export const Carsouel = () => {
             className="flex min-w-full flex-col text-center items-center  p-10 snap-center"
             key={index}
           >
-            <h1 className="text-4xl font-roboto font-bold outline text-neutral-900  w-fit rounded-full mt-10 px-10 py-5">
+            <h1 className="lg:text-4xl md:text-3xl text-2xl font-roboto font-bold outline text-neutral-900  w-fit rounded-full mt-10 px-10 lg:py-5 py-3">
               {item.title}
             </h1>
-            <p className="text-2xl mt-10 max-w-[70%] font-medium text-neutral-600 font-popins">
+            <p className="lg:text-2xl md:text-xl text-lg mt-10 lg:max-w-[70%] font-medium text-neutral-600 font-popins">
               {item.description}
             </p>
-            <div className="flex flex-wrap w-full mt-16 items-center">
+            <div className="flex md:flex-row flex-col md  :flex-wrap w-full mt-16 gap-5 md:items-center items-start justify-center">
               {item.features.map((feat, index) => (
-                <span className="m-auto flex gap-4 items-center" key={index}>
-                  <FaRegCheckCircle size={25} className="text-green-600" />{" "}
-                  <p className="text-neutral-700 text-xl font-medium font-popins">
+                <span className="m-auto flex gap-4 items-center w-full md:w-fit" key={index}>
+                  <FaRegCheckCircle size={25} className="text-green-600" />
+                  <p className="text-neutral-700 lg:text-xl md:text-lg text-sm font-medium font-popins">
                     {feat}
                   </p>
                 </span>

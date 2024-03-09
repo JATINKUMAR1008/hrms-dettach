@@ -15,8 +15,8 @@ const leaveExample = [
 import "react-circular-progressbar/dist/styles.css";
 export const ClusteredCard = () => {
   return (
-    <div className="w-full flex max-w-[1200px] justify-center m-auto relative pb-10">
-      <div className="rounded-lg border-[3px] max-w-[200px] max-h-[300px] border-neutral-200 py-2 px-5 shadow-neutral-shadow">
+    <div className="w-full flex max-w-[1200px] justify-center m-auto relative pb-10 px-10 lg:px-0">
+      <div className="rounded-lg border-[3px] max-w-[200px] max-h-[300px] border-neutral-200 py-2 px-5 shadow-neutral-shadow hidden lg:block">
         <TbActivityHeartbeat size={100} className="text-neutral-800" />
         <h3 className="text-lg font-medium font-popins text-neutral-500">
           Work accident insurance
@@ -25,7 +25,7 @@ export const ClusteredCard = () => {
           $3200
         </p>
       </div>
-      <div className="rounded-lg outline outline-neutral-200 ml-10 py-10 px-7">
+      <div className="rounded-lg outline outline-neutral-200 lg:ml-10 py-10 px-7">
         <Image src={slack_icon} alt="slack" width={50} height={50} />
         <div className="bg-neutral-100 text-neutral-600 text-lg px-5 py-3 rounded-lg mt-5 max-w-[400px] font-medium">
           <h3>Hello Yasuo</h3>
@@ -54,7 +54,7 @@ export const ClusteredCard = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[300px] ml-10 w-full max-h-[250px] mt-[200px] outline outline-neutral-200 py-10 px-5 rounded-md shadow-neutral-shadow">
+      <div className="max-w-[300px] ml-10 w-full max-h-[250px] mt-[200px] outline outline-neutral-200 py-10 px-5 rounded-md shadow-neutral-shadow hidden lg:block">
         <div className="px-3 py-2 outline outline-neutral-200 flex rounded-md w-full text-xl font-medium text-neutral-700 items-center justify-between">
           Stripe <MdOutlineKeyboardArrowDown size={30} />
         </div>
@@ -68,7 +68,7 @@ export const ClusteredCard = () => {
           Pay
         </Button>
       </div>
-      <div className="absolute px-5 rounded-md max-w-[350px] w-full py-3 flex right-[150px] bg-white top-12 outline outline-neutral-200 shadow-neutral-shadow">
+      <div className="absolute px-5 rounded-md max-w-[350px] w-full py-3 flex lg:right-[150px] bg-white lg:top-12 top-[85%] outline outline-neutral-200 shadow-neutral-shadow">
         <div className="w-14 h-14 bg-indigo-700 flex justify-center text-2xl font-extrabold items-center rounded-full">
           JK
         </div>
