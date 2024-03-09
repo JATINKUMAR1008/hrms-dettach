@@ -58,7 +58,7 @@ const ShowDetails = ({description}:{description: string}) => {
     return(
         <div className="w-full text-left mt-5 duration-75 ease-in-out">
             <p className="xl:text-xl text-base font-medium text-neutral-500 pr-2">{description}</p>
-            <Link href="/" className="text-new-primary font-medium hover:underline flex text-xl items-center gap-3 mt-10">Read more <IoArrowForwardOutline size={25}/></Link>
+            <Link href="/" className="text-new-primary font-medium hover:underline flex lg:text-xl md:text-lg text-base items-center gap-3 mt-10">Read more <IoArrowForwardOutline size={25}/></Link>
         </div>
     )
 }
