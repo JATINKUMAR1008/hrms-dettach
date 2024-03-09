@@ -71,6 +71,8 @@ export const Carsouel = () => {
         infiniteLoop
         showThumbs={false}
         showStatus={false}
+        showArrows={false}
+        showIndicators={false}
         className=""
       >
         {MENUOPTONS.map((item, index) => (
@@ -84,7 +86,7 @@ export const Carsouel = () => {
             <p className="lg:text-2xl md:text-xl text-lg mt-10 lg:max-w-[70%] font-medium text-neutral-600 font-popins">
               {item.description}
             </p>
-            <div className="flex md:flex-row flex-col md  :flex-wrap w-full mt-16 gap-5 md:items-center items-start justify-center">
+            <div className="flex md:flex-row flex-col md:flex-wrap w-full mt-16 gap-5 md:items-center items-start justify-center">
               {item.features.map((feat, index) => (
                 <span className="m-auto flex gap-4 items-center w-full md:w-fit" key={index}>
                   <FaRegCheckCircle size={25} className="text-green-600" />
