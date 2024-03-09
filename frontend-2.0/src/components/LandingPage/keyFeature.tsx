@@ -25,7 +25,7 @@ export const KeyFeature = () => {
             </p>
             <div className="w-full px-4 flex lg:flex-row lg:gap-5 flex-col items-center justify-center">
             {DATA.map((data,index)=>(
-                <div className="max-w-[500px] px-5 py-3 flex gap-5 items-center mb-5  outline outline-neutral-200 rounded-2xl">
+                <div className="max-w-[500px] px-5 py-3 flex gap-5 items-center mb-5  outline outline-neutral-200 rounded-2xl" key={index}>
                     {data.icon}
                     <p className="lg:text-xl md:text-lg text-base font-medium text-neutral-500">{data.desc}</p>
                 </div>
