@@ -1,5 +1,6 @@
 import { Carsouel } from "@/components/LandingPage/carsouel";
 import { ClusteredCard } from "@/components/LandingPage/clusterCard";
+import { IntegrationAccord } from "@/components/LandingPage/integrationAccord";
 import { LandingPageNavbar } from "@/components/LandingPage/landingNavbar";
 import { Button } from "@/components/commons/button";
 import { Butcherman } from "next/font/google";
@@ -35,6 +36,17 @@ export default function Home() {
         </h1>
         <Carsouel />
       </section>
+      <section className="my-20 py-10 w-full text-center">
+        <h1 className="xl:text-4xl lg:text-3xl text-2xl font-extrabold font-roboto text-neutral-800
+        "> Integration Capabilities </h1>
+        <p className="lg:text-xl md:text-lg text-base mt-2 mb-10 font-medium text-neutral-600">Streamline your HR operations by seamlessly integrating our HR <br/>mobile app with your exisiting systems.</p>
+        <div className="w-full m-auto max-w-[1500px] grid grid-cols-2">
+          <div className="col-span-2 lg:col-span-1">
+          <IntegrationAccord/>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

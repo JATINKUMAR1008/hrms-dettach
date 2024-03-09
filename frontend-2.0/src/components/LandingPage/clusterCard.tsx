@@ -25,7 +25,7 @@ export const ClusteredCard = () => {
           $3200
         </p>
       </div>
-      <div className="rounded-lg outline outline-neutral-200 lg:ml-10 lg:py-10 py-5 lg:px-7 px-4">
+      <div className="rounded-lg outline outline-neutral-100 lg:ml-10 lg:py-10 py-5 lg:px-7 px-4">
         <Image src={slack_icon} alt="slack" width={50} height={50} />
         <div className="bg-neutral-100 text-neutral-600 lg:text-lg text-sm px-5 py-3 rounded-lg mt-5 max-w-[400px] font-medium">
           <h3>Hello Yasuo</h3>
