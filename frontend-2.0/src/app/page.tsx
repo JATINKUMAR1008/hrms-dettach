@@ -30,6 +30,9 @@ export default function Home() {
         <ClusteredCard />
       </section>
       <section className="my-20">
+        <h1 className="mt-10 text-4xl w-full font-roboto font-extrabold text-neutral-800 text-center flex items-center justify-center">
+          • Features •
+        </h1>
         <Carsouel />
       </section>
     </>

@@ -1,4 +1,7 @@
+"use client";
+import { useEffect, useRef } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { Carousel as RCarousel } from "react-responsive-carousel";
 const MENUOPTONS = [
   {
     title: "People centric",
@@ -33,16 +36,49 @@ const MENUOPTONS = [
     ],
   },
 ];
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 export const Carsouel = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  // useEffect(() => {
+  //   const carousel = carouselRef.current;
+  //   console.log(carousel?.offsetWidth);
+  //   let scrollInterval = setInterval(() => {
+  //     if (carousel) {
+  //       carousel.scrollLeft += carousel.clientWidth / 2; // Adjust the scroll speed as needed
+  //     }
+  //   }, 2); // Adjust the interval duration as needed
+
+  //   // When user interacts with the carousel, clear the interval
+  //   // if (carousel) {
+  //   //   carousel.addEventListener("mouseenter", () =>
+  //   //     clearInterval(scrollInterval)
+  //   //   );
+  //   //   carousel.addEventListener("mouseleave", () => {
+  //   //     scrollInterval = setInterval(() => {
+  //   //       if (carousel) {
+  //   //         carousel.scrollLeft += 2; // Adjust the scroll speed as needed
+  //   //       }
+  //   //     }, 2); // Adjust the interval duration as needed
+  //   //   });
+  //   // }
+
+  //   return () => clearInterval(scrollInterval);
+  // }, []);
   return (
-    <div className="max-w-[1500px] m-auto h-[600px]  overflow-x-auto relative">
-      <div className="flex items-center justify-center w-max text-neutral-950 gap-10 ">
+    <div className="max-w-[1500px] m-auto h-[600px] w-full">
+      <RCarousel
+        autoPlay
+        infiniteLoop
+        showThumbs
+        showStatus={false}
+        className=""
+      >
         {MENUOPTONS.map((item, index) => (
           <div
-            className="w-[1500px] flex flex-col text-center items-center flex-grow-0 p-10 m-auto"
+            className="flex min-w-full flex-col text-center items-center  p-10 snap-center"
             key={index}
           >
-            <h1 className="text-4xl font-roboto font-bold outline w-fit rounded-full mt-10 px-10 py-5">
+            <h1 className="text-4xl font-roboto font-bold outline text-neutral-900  w-fit rounded-full mt-10 px-10 py-5">
               {item.title}
             </h1>
             <p className="text-2xl mt-10 max-w-[70%] font-medium text-neutral-600 font-popins">
@@ -60,7 +96,7 @@ export const Carsouel = () => {
             </div>
           </div>
         ))}
-      </div>
+      </RCarousel>
     </div>
   );
 };
