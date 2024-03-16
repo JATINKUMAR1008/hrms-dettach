@@ -4,10 +4,11 @@ import { twMerge } from "tailwind-merge";
 interface IProps {
   type: "outlined" | "solid";
   className?: string;
+  buttonType?: "submit" | "reset" | "button";
   onClick?: () => void;
   children: React.ReactNode;
 }
-export const Button = ({ type, className, onClick, children }: IProps) => {
+export const Button = ({ type, className, onClick, children ,buttonType}: IProps) => {
   return (
     <button
       className={twMerge(
@@ -17,6 +18,7 @@ export const Button = ({ type, className, onClick, children }: IProps) => {
         className
       )}
       onClick={onClick}
+      type={buttonType}
     >
       {children}
     </button>
